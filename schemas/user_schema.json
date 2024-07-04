@@ -1,0 +1,99 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/UserSchema",
+    "definitions": {
+        "UserSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "age": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "address": {
+                    "$ref": "#/definitions/Address"
+                },
+                "bankAccount": {
+                    "$ref": "#/definitions/BankAccount"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "deletedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "address",
+                "age",
+                "bankAccount",
+                "email",
+                "name",
+                "role"
+            ],
+            "title": "UserSchema"
+        },
+        "Address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "street": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "city",
+                "state",
+                "street",
+                "zip"
+            ],
+            "title": "Address"
+        },
+        "BankAccount": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "accountNumber": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "balance": {
+                    "type": "number"
+                },
+                "currency": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "accountNumber",
+                "balance",
+                "currency"
+            ],
+            "title": "BankAccount"
+        }
+    }
+}

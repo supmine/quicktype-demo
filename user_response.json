@@ -1,0 +1,20 @@
+{
+    "name": "John Doe",
+    "age": 30,
+    "email": "john.doe@example.com",
+    "role": "user",
+    "address": {
+        "street": "123 Main St",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62701"
+    },
+    "bankAccount": {
+        "accountNumber": "1234567890",
+        "balance": 1000.00,
+        "currency": "USD"
+    },
+    "createdAt": "2020-01-01T00:00:00Z",
+    "updatedAt": "2020-01-01T00:00:00Z",
+    "deletedAt": "2020-01-01T00:00:00Z"
+}
